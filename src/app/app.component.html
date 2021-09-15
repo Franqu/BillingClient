@@ -1,0 +1,20 @@
+<section>
+  <div class="button-label">
+    <button mat-button (click)="getBillsSortedByCallTime()">Call Time</button>
+    <button mat-button (click)="getBillsSortedById()">Id</button>
+    <button mat-button (click)="getBillsSortedByPhoneNumberCaller()">Caller</button>
+    <button mat-button (click)="getBillsSortedByPhoneNumberReceiver()">Receiver</button>
+    </div>
+</section>
+
+<div *ngFor="let bill of bills">
+  <div>ID: {{bill.id}}</div>
+  <div>Caller: {{bill.phoneNumberCaller}}</div>
+  <div>Receiver: {{bill.phoneNumberReceiver}}</div>
+  <div>Ongoing: {{bill.ongoing}}</div>
+  <div>Lenght: {{bill.lenght}}</div>
+  <div>Size: {{bill.size}}</div>
+  <div>Call Time: {{bill.callTime}}</div>  
+  <div>Connection Type: {{bill.connectionType}}</div>
+  <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+</div>
